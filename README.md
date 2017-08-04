@@ -4,7 +4,7 @@ UEFI+GPT (-BIOS(GRUB)+MBR)
 
 parted /dev/mmcblk0  
     
-    (parted) mklable gpt
+    (parted) mklabel gpt
     (parted) mkpart ESP fat32 1MiB 513MiB
     (parted) mkpart primary ext4 513MiB 100%
     (parted) set 1 boot on
