@@ -65,7 +65,7 @@ vi /boot/loader/entries/arch.conf
 (Grub)
 
     pacman -S efibootmgr grub os-prober   
-    grub-install --efi-directory=/boot --bootloader-id=Arch-Linux --recheck   
+    grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch-Linux --recheck   
     grub-mkconfig -o /boot/grub/grub.cfg      
 
 
