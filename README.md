@@ -70,7 +70,7 @@ reboot
 
 vi /etc/pacman.conf
 
-    [archllinuxcn]
+    [archlinuxcn]
     SigLevel = Optional TrustAll
     Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 
