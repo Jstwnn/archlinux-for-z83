@@ -61,7 +61,9 @@ vi /boot/loader/entries/arch.conf
     initrd /initramfs-linux.img
     options root=/dev/mmcblk0p2 rw
 
+
 (Grub)
+
     pacman -S efibootmgr grub os-prober    
     grub-install --efi-directory=/boot --bootloader-id=Arch-Linux --recheck
     grub-mkconfig -o /boot/grub/grub.cfg    
