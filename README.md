@@ -89,8 +89,6 @@ pacman -S archlinuxcn-keyring
 pacman -S xorg-server xorg-xinit xorg-twm xorg-xclock xterm   
 startx   
 
-pacman -S openbox feh xfce4-terminal alsi screenfetch firefox wqy-zenhei    
+pacman -S i3-wm feh roxterm screenfetch firefox wqy-zenhei    
 
-alias ls='ls --color'   
-feh --bg-scale /PATH/arch.jpg   
-xinit /usr/bin/openbox-session   
+feh --bg-scale /PATH/arch.jpg 
