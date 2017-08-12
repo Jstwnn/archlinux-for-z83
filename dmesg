@@ -52,3 +52,14 @@
 [17285.080525] usbcore: registered new interface driver brcmfmac
 [17285.264188] brcmfmac: brcmf_c_preinit_dcmds: Firmware version = wl0: Jun 17 2014 11:48:43 version 6.10.190.49 (r485840) FWID 01-8744bcd2
 
+
+Solution ---- 
+
+cp brcmfmac43340-sdio.txt /lib/firmware/brcm/brcmfmac43241b4-sdio.txt
+cp brcmfmac43340-sdio.bin /lib/firmware/brcm/brcmfmac43241b4-sdio.bin
+
+Then removing and re-loading the
+kernel module with:
+
+ modprobe -v -r brcmfmac
+ modprobe -v brcmfmac
