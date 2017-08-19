@@ -17,6 +17,11 @@ WantedBy=multi-user.target
 Then enable the btattach.service systemd service.
 Tip: * If btattach doesn't works, remove "-P bcm" parameter and try again
 
+Post operation---
+./brcm_patchram_plus --use_baudrate_for_download --no2bytes --enable_lpm --enable_hci --baudrate 3000000 --patchram /lib/firmware/brcm/BCM43341B0.hcd  /dev/ttyS1 &
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 copy from orig link - http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-edison/tree/meta-intel-edison-bsp/recipes-kernel/bcm43340|bcm43340-bt/
 ======================
 
