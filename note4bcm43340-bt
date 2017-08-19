@@ -1,3 +1,22 @@
+Bluetooth
+Install a correct firmware file (e.g., BCM43341B0_002.001.014.0122.0176.hcd from Windows 10 driver) as /lib/firmware/brcm/BCM43341B0.hcd.
+Install the bluez package, enable the bluetooth.service systemd service, and then run this command
+# btattach --bredr /dev/ttyS1 -P bcm
+To automate running this command at startup you can create a service file for it
+/etc/systemd/system/btattach.service
+[Unit]
+Description=Btattach
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/btattach --bredr /dev/ttyS1 -P bcm
+ExecStop=/usr/bin/killall btattach
+
+[Install]
+WantedBy=multi-user.target
+Then enable the btattach.service systemd service.
+Tip: * If btattach doesn't works, remove "-P bcm" parameter and try again
+
 copy from orig link - http://git.yoctoproject.org/cgit/cgit.cgi/meta-intel-edison/tree/meta-intel-edison-bsp/recipes-kernel/bcm43340|bcm43340-bt/
 ======================
 
